@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista 1 - Estatística e Probabilidade (UFU) - Memorial Completo com Somatórios Detalhados e Gráficos</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 16mm 14mm;
+    }
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.55;
+      color: #0f172a;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+      font-size: 10.5pt;
+    }
+    .header {
+      border-bottom: 3px solid #2563eb;
+      padding-bottom: 12px;
+      margin-bottom: 22px;
+    }
+    .header h1 {
+      font-size: 17pt;
+      margin: 0 0 6px 0;
+      color: #1e3a8a;
+    }
+    .header .meta {
+      font-size: 9.5pt;
+      color: #475569;
+    }
+    h2.section-title {
+      font-size: 13pt;
+      color: #1e40af;
+      border-left: 5px solid #2563eb;
+      padding-left: 10px;
+      margin-top: 26px;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .exercise-card {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 22px;
+      page-break-inside: avoid;
+    }
+    .exercise-title {
+      font-size: 12pt;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #cbd5e1;
+      padding-bottom: 5px;
+    }
+    .enunciado {
+      font-style: italic;
+      color: #334155;
+      background: #f1f5f9;
+      padding: 8px 12px;
+      border-left: 3px solid #94a3b8;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      font-size: 9.5pt;
+    }
+    .item {
+      margin-bottom: 10px;
+    }
+    .item-label {
+      font-weight: 700;
+      color: #1d4ed8;
+    }
+    .calc-box {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #3b82f6;
+      border-radius: 4px;
+      padding: 11px 15px;
+      margin: 9px 0;
+      font-size: 9.8pt;
+    }
+    .calc-title {
+      font-weight: 700;
+      color: #1e3a8a;
+      margin-bottom: 5px;
+    }
+    .formula {
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      background: #f8fafc;
+      padding: 4px 8px;
+      border-radius: 4px;
+      display: inline-block;
+      margin: 3px 0;
+      font-size: 10.2pt;
+    }
+    .somatorio-exp {
+      background: #f1f5f9;
+      padding: 7px 11px;
+      border-radius: 4px;
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+      margin: 5px 0;
+      line-height: 1.6;
+      display: block;
+    }
+    .answer-highlight {
+      font-weight: 700;
+      color: #047857;
+      background: #ecfdf5;
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid #a7f3d0;
+      display: inline-block;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 9.5pt;
+      background: #ffffff;
+    }
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 6px 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #e2e8f0;
+      color: #0f172a;
+      font-weight: 600;
+    }
+    tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+    .chart-container {
+      margin: 12px 0 16px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Universidade Federal de Uberlândia (UFU)</h1>
+    <div class="meta">
+      <strong>Faculdade de Engenharia / Computação</strong> | <strong>Disciplina:</strong> Estatística e Probabilidade<br>
+      <strong>Professor:</strong> Giovanny Snaider Barrera Ramos<br>
+      <strong>Documento de Resolução Completa — Somatórios Termo a Termo e Gráficos Vetoriais</strong><br>
+      <strong>Exercícios Resolvidos:</strong> 1, 2, 3, 4, 7, 8, 13, 14, 15, 17, 18, 19, 23, 24, 27, 28, 30 e 31
+    </div>
+  </div>
+
+  <h2 class="section-title">Parte I — Estatística Descritiva</h2>
+
+  <!-- EXERCÍCIO 1 -->
+  <div class="exercise-card">
+    <div class="exercise-title">Exercício 1 — Classificação de Variáveis</div>
+    <div class="enunciado">Classifique as variáveis em qualitativa nominal, qualitativa ordinal, quantitativa discreta ou quantitativa contínua.</div>
+    <div class="item"><span class="item-label">(a)</span> Tipo de sistema operacional: <span class="answer-highlight">Qualitativa nominal</span> (categorias sem ordem, ex.: Windows, Linux, macOS).</div>
+    <div class="item"><span class="item-label">(b)</span> Número de acessos simultâneos a um servidor: <span class="answer-highlight">Quantitativa discreta</span> (contagem de inteiros não negativos).</div>
+    <div class="item"><span class="item-label">(c)</span> Situação financeira de uma empresa (lucro, prejuízo): <span class="answer-highlight">Qualitativa nominal</span> (categoria/estado financeiro binário).</div>
+    <div class="item"><span class="item-label">(d)</span> Nível de prioridade de chamados técnicos: <span class="answer-highlight">Qualitativa ordinal</span> (ordem hierárquica bem definida: baixa, média, alta, crítica).</div>
+    <div class="item"><span class="item-label">(e)</span> Forma de pagamento utilizada pelos clientes: <span class="answer-highlight">Qualitativa nominal</span> (categorias sem hierarquia: cartão, Pix, boleto, dinheiro).</div>
+    <div class="item"><span class="item-label">(f)</span> Quantidade de produtos vendidos por dia: <span class="answer-highlight">Quantitativa discreta</span> (mensuração por contagem de itens inteiros).</div>
+    <div class="item"><span class="item-label">(g)</span> Tempo de resposta de um sistema: <span class="answer-highlight">Quantitativa contínua</span> (tempo contínuo mensurável em frações reais, ex.: 12,45 ms).</div>
+    <div class="item"><span class="item-label">(h)</span> Grau de satisfação do cliente: <span class="answer-highlight">Qualitativa ordinal</span> (escala avaliativa ordenada: péssimo, regular, bom, excelente).</div>
+  </div>
+
+  <!-- EXERCÍCIO 2 -->
+  <div class="exercise-card">
+    <div class="exercise-title">Exercício 2 — Acessos Diários a Sistema de Gestão (n = 22)</div>
+    <div class="enunciado">Dados: 120, 120, 140, 150, 160, 145, 150, 170, 150, 160, 140, 180, 150, 180, 160, 135, 145, 170, 135, 145, 160, 180.</div>
+
+    <div class="item"><span class="item-label">(a)</span> <strong>Distribuição de Frequências:</strong>
+      <p>Rol ordenado: <em>120, 120, 135, 135, 140, 140, 145, 145, 145, 150, 150, 150, 150, 160, 160, 160, 160, 170, 170, 180, 180, 180</em>.</p>
+    </div>
+    <table>
+      <thead>
+        <tr><th>Acessos (x<sub>i</sub>)</th><th>f<sub>i</sub></th><th>f<sub>r</sub></th><th>f<sub>r</sub> (%)</th><th>F<sub>i</sub> (Acum.)</th><th>F<sub>r</sub> (%)</th><th>f<sub>i</sub> · x<sub>i</sub></th><th>f<sub>i</sub> · (x<sub>i</sub> - x̄)²</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>120</td><td>2</td><td>0,0909</td><td>9,09%</td><td>2</td><td>9,09%</td><td>240</td><td>2054,63</td></tr>
+        <tr><td>135</td><td>2</td><td>0,0909</td><td>9,09%</td><td>4</td><td>18,18%</td><td>270</td><td>581,09</td></tr>
+        <tr><td>140</td><td>2</td><td>0,0909</td><td>9,09%</td><td>6</td><td>27,27%</td><td>280</td><td>290,19</td></tr>
+        <tr><td>145</td><td>3</td><td>0,1364</td><td>13,64%</td><td>9</td><td>40,91%</td><td>435</td><td>148,87</td></tr>
+        <tr><td>150</td><td>4</td><td>0,1818</td><td>18,18%</td><td>13</td><td>59,09%</td><td>600</td><td>16,74</td></tr>
+        <tr><td>160</td><td>4</td><td>0,1818</td><td>18,18%</td><td>17</td><td>77,27%</td><td>640</td><td>253,13</td></tr>
+        <tr><td>170</td><td>2</td><td>0,0909</td><td>9,09%</td><td>19</td><td>86,36%</td><td>340</td><td>644,73</td></tr>
+        <tr><td>180</td><td>3</td><td>0,1364</td><td>13,64%</td><td>22</td><td>100,00%</td><td>540</td><td>2343,57</td></tr>
+        <tr><td><strong>Total</strong></td><td><strong>22</strong></td><td><strong>1,0000</strong></td><td><strong>100%</strong></td><td>—</td><td>—</td><td><strong>3345</strong></td><td><strong>6332,95</strong></td></tr>
+      </tbody>
+    </table>
+
+    <div class="item"><span class="item-label">(b)</span> <strong>Gráfico Apropriado:</strong> Gráfico de Bastões / Barras verticais.</div>
+    <div class="chart-container">
+      
+    <svg width="100%" height="auto" viewBox="0 0 560 280" xmlns="http://www.w3.org/2000/svg" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; margin: 14px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+      <text x="280" y="22" font-size="13.5" font-weight="bold" text-anchor="middle" fill="#0f172a" font-family="sans-serif">Exercício 2: Gráfico de Bastões — Acessos Diários ao Sistema</text>
+      <line x1="50" y1="232" x2="530" y2="232" stroke="#e2e8f0" stroke-width="1"/><text x="40" y="236" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">0</text><line x1="50" y1="183.5" x2="530" y2="183.5" stroke="#e2e8f0" stroke-width="1"/><text x="40" y="187.5" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">1</text><line x1="50" y1="135" x2="530" y2="135" stroke="#e2e8f0" stroke-width="1"/><text x="40" y="139" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">2</text><line x1="50" y1="86.5" x2="530" y2="86.5" stroke="#e2e8f0" stroke-width="1"/><text x="40" y="90.5" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">3</text><line x1="50" y1="38" x2="530" y2="38" stroke="#e2e8f0" stroke-width="1"/><text x="40" y="42" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">4</text>
+      <line x1="50" y1="232" x2="530" y2="232" stroke="#334155" stroke-width="1.5"/>
+      <line x1="50" y1="38" x2="50" y2="232" stroke="#334155" stroke-width="1.5"/>
+      
+      <rect x="63.5" y="135" width="33" height="97" fill="#3b82f6" rx="3" stroke="#1d4ed8" stroke-width="1.2"/>
+      <text x="80" y="129" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">2</text>
+      <text x="80" y="250" font-size="11" font-weight="500" text-anchor="middle" fill="#1e293b" font-family="sans-serif">120</text>
+    
+      <rect x="123.5" y="135" width="33" height="97" fill="#3b82f6" rx="3" stroke="#1d4ed8" stroke-width="1.2"/>
+      <text x="140" y="129" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">2</text>
+      <text x="140" y="250" font-size="11" font-weight="500" text-anchor="middle" fill="#1e293b" font-family="sans-serif">135</text>
+    
+      <rect x="183.5" y="135" width="33" height="97" fill="#3b82f6" rx="3" stroke="#1d4ed8" stroke-width="1.2"/>
+      <text x="200" y="129" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">2</text>
+      <text x="200" y="250" font-size="11" font-weight="500" text-anchor="middle" fill="#1e293b" font-family="sans-serif">140</text>
+    
+      <rect x="243.5" y="86.5" width="33" height="145.5" fill="#3b82f6" rx="3" stroke="#1d4ed8" stroke-width="1.2"/>
+      <text x="260" y="80.5" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">3</text>
+      <text x="260" y="250" font-size="11" font-weight="500" text-anchor="middle" fill="#1e293b" font-family="sans-serif">145</text>
+    
+      <rect x="303.5" y="38" width="33" height="194" fill="#3b82f6" rx="3" stroke="#1d4ed8" stroke-width="1.2"/>
+      <text x="320" y="32" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">4</text>
+      <text x="320" y="250" font-size="11" font-weight="500" text-anchor="middle" fill="#1e293b" font-family="sans-serif">150</text>
+    
+      <rect x="363.5" y="38" width="33" height="194" fill="#3b82f6" rx="3" stroke="#1d4ed8" stroke-width="1.2"/>
+      <text x="380" y="32" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">4</text>
+      <text x="380" y="250" font-size="11" font-weight="500" text-anchor="middle" fill="#1e293b" font-family="sans-serif">160</text>
+    
+      <rect x="423.5" y="135" width="33" height="97" fill="#3b82f6" rx="3" stroke="#1d4ed8" stroke-width="1.2"/>
+      <text x="440" y="129" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">2</text>
+      <text x="440" y="250" font-size="11" font-weight="500" text-anchor="middle" fill="#1e293b" font-family="sans-serif">170</text>
+    
+      <rect x="483.5" y="86.5" width="33" height="145.5" fill="#3b82f6" rx="3" stroke="#1d4ed8" stroke-width="1.2"/>
+      <text x="500" y="80.5" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">3</text>
+      <text x="500" y="250" font-size="11" font-weight="500" text-anchor="middle" fill="#1e293b" font-family="sans-serif">180</text>
+    
+      <text x="290" y="268" font-size="11.5" font-weight="600" text-anchor="middle" fill="#334155" font-family="sans-serif">Acessos Diários</text>
+      <text transform="rotate(-90)" x="-135" y="16" font-size="11.5" font-weight="600" text-anchor="middle" fill="#334155" font-family="sans-serif">Frequência Absoluta (dias)</text>
+    </svg>
+  
+    </div>
+
+    <div class="item"><span class="item-label">(c)</span> <strong>Cálculos Detalhados com Somatórios Termo a Termo:</strong>
+      <div class="calc-box">
+        <div class="calc-title">1. Somatório da Média (x̄):</div>
+        <div class="somatorio-exp">
+          Σ<sub>i=1</sub><sup>8</sup> (f<sub>i</sub> · x<sub>i</sub>) = (2 · 120) + (2 · 135) + (2 · 140) + (3 · 145) + (4 · 150) + (4 · 160) + (2 · 170) + (3 · 180)<br>
+          = 240 + 270 + 280 + 435 + 600 + 640 + 340 + 540 = <strong>3345</strong>
+        </div>
+        x̄ = 3345 / 22 = 152,0455... ⇒ <span class="answer-highlight">x̄ ≈ 152,05 acessos</span>
+      </div>
+      <div class="calc-box">
+        <div class="calc-title">2. Mediana (Md):</div>
+        n = 22 (par) ⇒ Posições: n/2 = 11 e n/2 + 1 = 12 ⇒ x<sub>(11)</sub> = 150, x<sub>(12)</sub> = 150.<br>
+        <div class="formula">Md = (150 + 150) / 2 = 150</div> ⇒ <span class="answer-highlight">Md = 150 acessos</span>
+      </div>
+      <div class="calc-box">
+        <div class="calc-title">3. Moda (Mo):</div>
+        Maior frequência f = 4 ⇒ <span class="answer-highlight">Mo = 150 e 160 acessos (Bimodal)</span>
+      </div>
+      <div class="calc-box">
+        <div class="calc-title">4. Somatório da Variância (s²):</div>
+        Abertura termo a termo da soma dos quadrados dos desvios com x̄ = 152,0455:<br>
+        <div class="somatorio-exp">
+          Σ<sub>i=1</sub><sup>8</sup> f<sub>i</sub>(x<sub>i</sub> - x̄)² =<br>
+          2·(120 - 152,05)² + 2·(135 - 152,05)² + 2·(140 - 152,05)² + 3·(145 - 152,05)² + 4·(150 - 152,05)² + 4·(160 - 152,05)² + 2·(170 - 152,05)² + 3·(180 - 152,05)²<br>
+          = 2054,63 + 581,09 + 290,19 + 148,87 + 16,74 + 253,13 + 644,73 + 2343,57 = <strong>6332,95</strong>
+        </div>
+        • <strong>Variância Amostral:</strong> s² = 6332,95 / (22 - 1) = 6332,95 / 21 ≈ <span class="answer-highlight">301,57</span><br>
+        • <strong>Desvio Padrão Amostral:</strong> s = √301,57 ≈ <span class="answer-highlight">17,37 acessos</span><br>
+        • <em>(Populacional: σ² = 6332,95 / 22 = 287,86; σ = √287,86 ≈ 16,97 acessos)</em>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXERCÍCIO 3 -->
+  <div class="exercise-card">
+    <div class="exercise-title">Exercício 3 — Receitas Mensais em Milhares de Reais (n = 24)</div>
+    <div class="enunciado">Dados: 24 receitas. R = 50 - 18 = 32. Regra de Sturges: k = 6 classes, amplitude h = 6.</div>
+
+    <div class="item"><span class="item-label">(a)</span> <strong>Tabela de Frequências (k = 6, h = 6):</strong></div>
+    <table>
+      <thead>
+        <tr><th>Classe</th><th>Intervalo (mil R$)</th><th>Ponto Médio (x<sub>i</sub>)</th><th>f<sub>i</sub></th><th>f<sub>r</sub> (%)</th><th>F<sub>i</sub></th><th>f<sub>i</sub> · x<sub>i</sub></th><th>f<sub>i</sub> · (x<sub>i</sub> - x̄)²</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>[18 ⊢ 24)</td><td>21,0</td><td>3</td><td>12,50%</td><td>3</td><td>63,0</td><td>792,19</td></tr>
+        <tr><td>2</td><td>[24 ⊢ 30)</td><td>27,0</td><td>3</td><td>12,50%</td><td>6</td><td>81,0</td><td>315,19</td></tr>
+        <tr><td>3</td><td>[30 ⊢ 36)</td><td>33,0</td><td>4</td><td>16,67%</td><td>10</td><td>132,0</td><td>72,25</td></tr>
+        <tr><td>4</td><td>[36 ⊢ 42)</td><td>39,0</td><td>5</td><td>20,83%</td><td>15</td><td>195,0</td><td>15,31</td></tr>
+        <tr><td>5</td><td>[42 ⊢ 48)</td><td>45,0</td><td>6</td><td>25,00%</td><td>21</td><td>270,0</td><td>360,38</td></tr>
+        <tr><td>6</td><td>[48 ⊢ 54)</td><td>51,0</td><td>3</td><td>12,50%</td><td>24</td><td>153,0</td><td>567,19</td></tr>
+        <tr><td><strong>Total</strong></td><td>—</td><td>—</td><td><strong>24</strong></td><td><strong>100%</strong></td><td>—</td><td><strong>894,0</strong></td><td><strong>2122,50</strong></td></tr>
+      </tbody>
+    </table>
+
+    <div class="item"><span class="item-label">(b)</span> <strong>Histograma e Polígono de Frequências:</strong></div>
+    <div class="chart-container">
+      
+    <svg width="100%" height="auto" viewBox="0 0 580 300" xmlns="http://www.w3.org/2000/svg" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; margin: 14px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+      <text x="302.5" y="24" font-size="13.5" font-weight="bold" text-anchor="middle" fill="#0f172a" font-family="sans-serif">Exercício 3: Histograma e Polígono de Frequências — Receitas Mensais</text>
+      
+      <g transform="translate(340, 16)">
+        <rect x="0" y="0" width="12" height="12" fill="#93c5fd" stroke="#2563eb" stroke-width="1"/>
+        <text x="18" y="10" font-size="10.5" fill="#334155" font-family="sans-serif">Histograma</text>
+        <line x1="95" y1="6" x2="115" y2="6" stroke="#dc2626" stroke-width="2.5"/>
+        <circle cx="105" cy="6" r="3" fill="#dc2626"/>
+        <text x="122" y="10" font-size="10.5" fill="#334155" font-family="sans-serif">Polígono</text>
+      </g>
+    
+      <line x1="55" y1="250" x2="550" y2="250" stroke="#e2e8f0" stroke-width="1"/><text x="45" y="254" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">0</text><line x1="55" y1="208" x2="550" y2="208" stroke="#e2e8f0" stroke-width="1"/><text x="45" y="212" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">2</text><line x1="55" y1="166" x2="550" y2="166" stroke="#e2e8f0" stroke-width="1"/><text x="45" y="170" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">4</text><line x1="55" y1="124" x2="550" y2="124" stroke="#e2e8f0" stroke-width="1"/><text x="45" y="128" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">6</text><line x1="55" y1="82" x2="550" y2="82" stroke="#e2e8f0" stroke-width="1"/><text x="45" y="86" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">8</text><line x1="55" y1="40" x2="550" y2="40" stroke="#e2e8f0" stroke-width="1"/><text x="45" y="44" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">10</text>
+      <line x1="55" y1="250" x2="550" y2="250" stroke="#334155" stroke-width="1.5"/>
+      <line x1="55" y1="40" x2="55" y2="250" stroke="#334155" stroke-width="1.5"/>
+      
+      <rect x="116.875" y="187" width="61.875" height="63" fill="#93c5fd" opacity="0.85" stroke="#2563eb" stroke-width="1.2"/>
+      <text x="147.8125" y="181" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">3</text>
+    
+      <rect x="178.75" y="187" width="61.875" height="63" fill="#93c5fd" opacity="0.85" stroke="#2563eb" stroke-width="1.2"/>
+      <text x="209.6875" y="181" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">3</text>
+    
+      <rect x="240.625" y="166" width="61.875" height="84" fill="#93c5fd" opacity="0.85" stroke="#2563eb" stroke-width="1.2"/>
+      <text x="271.5625" y="160" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">4</text>
+    
+      <rect x="302.5" y="145" width="61.875" height="105" fill="#93c5fd" opacity="0.85" stroke="#2563eb" stroke-width="1.2"/>
+      <text x="333.4375" y="139" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">5</text>
+    
+      <rect x="364.375" y="124" width="61.875" height="126" fill="#93c5fd" opacity="0.85" stroke="#2563eb" stroke-width="1.2"/>
+      <text x="395.3125" y="118" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">6</text>
+    
+      <rect x="426.25" y="187" width="61.875" height="63" fill="#93c5fd" opacity="0.85" stroke="#2563eb" stroke-width="1.2"/>
+      <text x="457.1875" y="181" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">3</text>
+    
+      
+      <polyline points="85.9,250.0 147.8,187.0 209.7,187.0 271.6,166.0 333.4,145.0 395.3,124.0 457.2,187.0 519.1,250.0" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linejoin="round"/>
+    <circle cx="85.9" cy="250.0" r="3.5" fill="#dc2626" stroke="#ffffff" stroke-width="1.5"/><circle cx="147.8" cy="187.0" r="3.5" fill="#dc2626" stroke="#ffffff" stroke-width="1.5"/><circle cx="209.7" cy="187.0" r="3.5" fill="#dc2626" stroke="#ffffff" stroke-width="1.5"/><circle cx="271.6" cy="166.0" r="3.5" fill="#dc2626" stroke="#ffffff" stroke-width="1.5"/><circle cx="333.4" cy="145.0" r="3.5" fill="#dc2626" stroke="#ffffff" stroke-width="1.5"/><circle cx="395.3" cy="124.0" r="3.5" fill="#dc2626" stroke="#ffffff" stroke-width="1.5"/><circle cx="457.2" cy="187.0" r="3.5" fill="#dc2626" stroke="#ffffff" stroke-width="1.5"/><circle cx="519.1" cy="250.0" r="3.5" fill="#dc2626" stroke="#ffffff" stroke-width="1.5"/>
+      
+      <line x1="116.875" y1="250" x2="116.875" y2="255" stroke="#334155" stroke-width="1"/>
+      <text x="116.875" y="268" font-size="10.5" text-anchor="middle" fill="#334155" font-family="sans-serif">18</text>
+    
+      <line x1="178.75" y1="250" x2="178.75" y2="255" stroke="#334155" stroke-width="1"/>
+      <text x="178.75" y="268" font-size="10.5" text-anchor="middle" fill="#334155" font-family="sans-serif">24</text>
+    
+      <line x1="240.625" y1="250" x2="240.625" y2="255" stroke="#334155" stroke-width="1"/>
+      <text x="240.625" y="268" font-size="10.5" text-anchor="middle" fill="#334155" font-family="sans-serif">30</text>
+    
+      <line x1="302.5" y1="250" x2="302.5" y2="255" stroke="#334155" stroke-width="1"/>
+      <text x="302.5" y="268" font-size="10.5" text-anchor="middle" fill="#334155" font-family="sans-serif">36</text>
+    
+      <line x1="364.375" y1="250" x2="364.375" y2="255" stroke="#334155" stroke-width="1"/>
+      <text x="364.375" y="268" font-size="10.5" text-anchor="middle" fill="#334155" font-family="sans-serif">42</text>
+    
+      <line x1="426.25" y1="250" x2="426.25" y2="255" stroke="#334155" stroke-width="1"/>
+      <text x="426.25" y="268" font-size="10.5" text-anchor="middle" fill="#334155" font-family="sans-serif">48</text>
+    
+    <line x1="488.125" y1="250" x2="488.125" y2="255" stroke="#334155" stroke-width="1"/>
+    <text x="488.125" y="268" font-size="10.5" text-anchor="middle" fill="#334155" font-family="sans-serif">54</text>
+  
+      <text x="302.5" y="288" font-size="11.5" font-weight="600" text-anchor="middle" fill="#334155" font-family="sans-serif">Receitas Mensais (em milhares de reais)</text>
+      <text transform="rotate(-90)" x="-145" y="18" font-size="11.5" font-weight="600" text-anchor="middle" fill="#334155" font-family="sans-serif">Frequência Absoluta (fi)</text>
+    </svg>
+  
+    </div>
+
+    <div class="item"><span class="item-label">(c)</span> <strong>Cálculos com Somatórios Termo a Termo:</strong>
+      <div class="calc-box">
+        <div class="calc-title">1. Somatório da Média Agrupada (x̄):</div>
+        <div class="somatorio-exp">
+          Σ<sub>i=1</sub><sup>6</sup> (f<sub>i</sub> · x<sub>i</sub>) = (3 · 21) + (3 · 27) + (4 · 33) + (5 · 39) + (6 · 45) + (3 · 51)<br>
+          = 63 + 81 + 132 + 195 + 270 + 153 = <strong>894,0</strong>
+        </div>
+        x̄ = 894,0 / 24 = 37,25 ⇒ <span class="answer-highlight">x̄ = 37,25 mil R$ (R$ 37.250,00)</span>
+      </div>
+      <div class="calc-box">
+        <div class="calc-title">2. Mediana Agrupada (Md):</div>
+        Posição: n/2 = 12 ⇒ 4ª classe: [36 ⊢ 42) (F<sub>3</sub> = 10, F<sub>4</sub> = 15).<br>
+        <div class="formula">Md = 36 + [ (12 - 10) / 5 ] · 6 = 36 + (2/5) · 6 = 36 + 2,40 = 38,40</div> ⇒ <span class="answer-highlight">Md = 38,40 mil R$</span>
+      </div>
+      <div class="calc-box">
+        <div class="calc-title">3. Moda Agrupada (Mo):</div>
+        Classe modal: [42 ⊢ 48) (f = 6). Czuber: Δ<sub>1</sub> = 6 - 5 = 1; Δ<sub>2</sub> = 6 - 3 = 3.<br>
+        <div class="formula">Mo = 42 + [ 1 / (1 + 3) ] · 6 = 42 + 1,50 = 43,50</div> ⇒ <span class="answer-highlight">Mo = 43,50 mil R$ (Czuber)</span> (Moda bruta = 45,00)
+      </div>
+      <div class="calc-box">
+        <div class="calc-title">4. Somatório da Variância Agrupada (s²):</div>
+        <div class="somatorio-exp">
+          Σ<sub>i=1</sub><sup>6</sup> f<sub>i</sub>(x<sub>i</sub> - 37,25)² =<br>
+          3·(21 - 37,25)² + 3·(27 - 37,25)² + 4·(33 - 37,25)² + 5·(39 - 37,25)² + 6·(45 - 37,25)² + 3·(51 - 37,25)²<br>
+          = 792,1875 + 315,1875 + 72,2500 + 15,3125 + 360,3750 + 567,1875 = <strong>2122,50</strong>
+        </div>
+        • <strong>Variância Amostral:</strong> s² = 2122,50 / (24 - 1) = 2122,50 / 23 ≈ <span class="answer-highlight">92,28 (mil R$)²</span><br>
+        • <strong>Desvio Padrão Amostral:</strong> s = √92,2826 ≈ <span class="answer-highlight">9,61 mil R$</span> (R$ 9.606,40)
+      </div>
+    </div>
+  </div>
+
+  <!-- EXERCÍCIO 4 -->
+  <div class="exercise-card">
+    <div class="exercise-title">Exercício 4 — Tempo de Atendimento de Chamados (n = 40)</div>
+    <div class="enunciado">Dados: 40 tempos de 5 a 72 minutos. Sturges: k = 7 classes, amplitude h = 10.</div>
+
+    <div class="item"><span class="item-label">(a)</span> <strong>Tabela de Frequências (k = 7, h = 10):</strong></div>
+    <table>
+      <thead>
+        <tr><th>Classe</th><th>Intervalo (min)</th><th>Ponto Médio (x<sub>i</sub>)</th><th>f<sub>i</sub></th><th>f<sub>r</sub> (%)</th><th>F<sub>i</sub></th><th>f<sub>i</sub> · x<sub>i</sub></th><th>f<sub>i</sub> · (x<sub>i</sub> - x̄)²</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>[5 ⊢ 15)</td><td>10</td><td>7</td><td>17,50%</td><td>7</td><td>70</td><td>5197,94</td></tr>
+        <tr><td>2</td><td>[15 ⊢ 25)</td><td>20</td><td>6</td><td>15,00%</td><td>13</td><td>120</td><td>1785,38</td></tr>
+        <tr><td>3</td><td>[25 ⊢ 35)</td><td>30</td><td>6</td><td>15,00%</td><td>19</td><td>180</td><td>315,38</td></tr>
+        <tr><td>4</td><td>[35 ⊢ 45)</td><td>40</td><td>6</td><td>15,00%</td><td>25</td><td>240</td><td>45,38</td></tr>
+        <tr><td>5</td><td>[45 ⊢ 55)</td><td>50</td><td>6</td><td>15,00%</td><td>31</td><td>300</td><td>975,38</td></tr>
+        <tr><td>6</td><td>[55 ⊢ 65)</td><td>60</td><td>5</td><td>12,50%</td><td>36</td><td>300</td><td>2587,81</td></tr>
+        <tr><td>7</td><td>[65 ⊢ 75)</td><td>70</td><td>4</td><td>10,00%</td><td>40</td><td>280</td><td>4290,25</td></tr>
+        <tr><td><strong>Total</strong></td><td>—</td><td>—</td><td><strong>40</strong></td><td><strong>100%</strong></td><td>—</td><td><strong>1490</strong></td><td><strong>15197,50</strong></td></tr>
+      </tbody>
+    </table>
+
+    <div class="item"><span class="item-label">(b)</span> <strong>Histograma:</strong></div>
+    <div class="chart-container">
+      
+    <svg width="100%" height="auto" viewBox="0 0 580 300" xmlns="http://www.w3.org/2000/svg" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; margin: 14px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+      <text x="302.5" y="24" font-size="13.5" font-weight="bold" text-anchor="middle" fill="#0f172a" font-family="sans-serif">Exercício 4: Histograma — Tempo de Atendimento de Chamados</text>
+      
+      <line x1="55" y1="250" x2="550" y2="250" stroke="#e2e8f0" stroke-width="1"/><text x="45" y="254" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">0</text><line x1="55" y1="208" x2="550" y2="208" stroke="#e2e8f0" stroke-width="1"/><text x="45" y="212" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">2</text><line x1="55" y1="166" x2="550" y2="166" stroke="#e2e8f0" stroke-width="1"/><text x="45" y="170" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">4</text><line x1="55" y1="124" x2="550" y2="124" stroke="#e2e8f0" stroke-width="1"/><text x="45" y="128" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">6</text><line x1="55" y1="82" x2="550" y2="82" stroke="#e2e8f0" stroke-width="1"/><text x="45" y="86" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">8</text><line x1="55" y1="40" x2="550" y2="40" stroke="#e2e8f0" stroke-width="1"/><text x="45" y="44" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">10</text>
+      <line x1="55" y1="250" x2="550" y2="250" stroke="#334155" stroke-width="1.5"/>
+      <line x1="55" y1="40" x2="55" y2="250" stroke="#334155" stroke-width="1.5"/>
+      
+      <rect x="55" y="103" width="70.71428571428571" height="147" fill="#93c5fd" opacity="0.85" stroke="#2563eb" stroke-width="1.2"/>
+      <text x="90.35714285714286" y="97" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">7</text>
+    
+      <rect x="125.71428571428571" y="124" width="70.71428571428571" height="126" fill="#93c5fd" opacity="0.85" stroke="#2563eb" stroke-width="1.2"/>
+      <text x="161.07142857142856" y="118" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">6</text>
+    
+      <rect x="196.42857142857142" y="124" width="70.7142857142857" height="126" fill="#93c5fd" opacity="0.85" stroke="#2563eb" stroke-width="1.2"/>
+      <text x="231.78571428571428" y="118" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">6</text>
+    
+      <rect x="267.1428571428571" y="124" width="70.71428571428572" height="126" fill="#93c5fd" opacity="0.85" stroke="#2563eb" stroke-width="1.2"/>
+      <text x="302.5" y="118" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">6</text>
+    
+      <rect x="337.85714285714283" y="124" width="70.71428571428572" height="126" fill="#93c5fd" opacity="0.85" stroke="#2563eb" stroke-width="1.2"/>
+      <text x="373.21428571428567" y="118" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">6</text>
+    
+      <rect x="408.57142857142856" y="145" width="70.71428571428572" height="105" fill="#93c5fd" opacity="0.85" stroke="#2563eb" stroke-width="1.2"/>
+      <text x="443.92857142857144" y="139" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">5</text>
+    
+      <rect x="479.2857142857143" y="166" width="70.71428571428572" height="84" fill="#93c5fd" opacity="0.85" stroke="#2563eb" stroke-width="1.2"/>
+      <text x="514.6428571428571" y="160" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">4</text>
+    
+      
+      
+      <line x1="55" y1="250" x2="55" y2="255" stroke="#334155" stroke-width="1"/>
+      <text x="55" y="268" font-size="10.5" text-anchor="middle" fill="#334155" font-family="sans-serif">5</text>
+    
+      <line x1="125.71428571428571" y1="250" x2="125.71428571428571" y2="255" stroke="#334155" stroke-width="1"/>
+      <text x="125.71428571428571" y="268" font-size="10.5" text-anchor="middle" fill="#334155" font-family="sans-serif">15</text>
+    
+      <line x1="196.42857142857142" y1="250" x2="196.42857142857142" y2="255" stroke="#334155" stroke-width="1"/>
+      <text x="196.42857142857142" y="268" font-size="10.5" text-anchor="middle" fill="#334155" font-family="sans-serif">25</text>
+    
+      <line x1="267.1428571428571" y1="250" x2="267.1428571428571" y2="255" stroke="#334155" stroke-width="1"/>
+      <text x="267.1428571428571" y="268" font-size="10.5" text-anchor="middle" fill="#334155" font-family="sans-serif">35</text>
+    
+      <line x1="337.85714285714283" y1="250" x2="337.85714285714283" y2="255" stroke="#334155" stroke-width="1"/>
+      <text x="337.85714285714283" y="268" font-size="10.5" text-anchor="middle" fill="#334155" font-family="sans-serif">45</text>
+    
+      <line x1="408.57142857142856" y1="250" x2="408.57142857142856" y2="255" stroke="#334155" stroke-width="1"/>
+      <text x="408.57142857142856" y="268" font-size="10.5" text-anchor="middle" fill="#334155" font-family="sans-serif">55</text>
+    
+      <line x1="479.2857142857143" y1="250" x2="479.2857142857143" y2="255" stroke="#334155" stroke-width="1"/>
+      <text x="479.2857142857143" y="268" font-size="10.5" text-anchor="middle" fill="#334155" font-family="sans-serif">65</text>
+    
+    <line x1="550" y1="250" x2="550" y2="255" stroke="#334155" stroke-width="1"/>
+    <text x="550" y="268" font-size="10.5" text-anchor="middle" fill="#334155" font-family="sans-serif">75</text>
+  
+      <text x="302.5" y="288" font-size="11.5" font-weight="600" text-anchor="middle" fill="#334155" font-family="sans-serif">Tempo de Atendimento (minutos)</text>
+      <text transform="rotate(-90)" x="-145" y="18" font-size="11.5" font-weight="600" text-anchor="middle" fill="#334155" font-family="sans-serif">Frequência Absoluta (chamados)</text>
+    </svg>
+  
+    </div>
+
+    <div class="item"><span class="item-label">(c)</span> <strong>Cálculos Detalhados com Somatórios:</strong>
+      <div class="calc-box">
+        <div class="calc-title">1. Somatório da Média:</div>
+        <div class="somatorio-exp">
+          Σ<sub>i=1</sub><sup>7</sup> (f<sub>i</sub> · x<sub>i</sub>) = (7 · 10) + (6 · 20) + (6 · 30) + (6 · 40) + (6 · 50) + (5 · 60) + (4 · 70)<br>
+          = 70 + 120 + 180 + 240 + 300 + 300 + 280 = <strong>1490</strong>
+        </div>
+        x̄ = 1490 / 40 = <span class="answer-highlight">37,25 min</span>
+      </div>
+      <div class="calc-box">
+        <div class="calc-title">2. Mediana:</div>
+        Posição n/2 = 20 ⇒ Classe [35 ⊢ 45) (F<sub>3</sub> = 19, F<sub>4</sub> = 25).<br>
+        <div class="formula">Md = 35 + [ (20 - 19) / 6 ] · 10 = 35 + 10/6 = 35 + 1,6667 ≈ 36,67 min</div> ⇒ <span class="answer-highlight">Md ≈ 36,67 min</span>
+      </div>
+      <div class="calc-box">
+        <div class="calc-title">3. Moda:</div>
+        Classe modal [5 ⊢ 15) com f = 7. Czuber: Δ<sub>1</sub> = 7, Δ<sub>2</sub> = 1 ⇒ Mo = 5 + (7/8)·10 = <span class="answer-highlight">13,75 min</span>
+      </div>
+      <div class="calc-box">
+        <div class="calc-title">4. Somatório da Variância (s²):</div>
+        <div class="somatorio-exp">
+          Σ<sub>i=1</sub><sup>7</sup> f<sub>i</sub>(x<sub>i</sub> - 37,25)² =<br>
+          7·(10-37,25)² + 6·(20-37,25)² + 6·(30-37,25)² + 6·(40-37,25)² + 6·(50-37,25)² + 5·(60-37,25)² + 4·(70-37,25)²<br>
+          = 5197,94 + 1785,38 + 315,38 + 45,38 + 975,38 + 2587,81 + 4290,25 = <strong>15197,50</strong>
+        </div>
+        • <strong>Variância Amostral:</strong> s² = 15197,50 / 39 ≈ <span class="answer-highlight">389,68 min²</span><br>
+        • <strong>Desvio Padrão Amostral:</strong> s = √389,68 ≈ <span class="answer-highlight">19,74 min</span>
+      </div>
+    </div>
+    <div class="item"><span class="item-label">(d)</span> <strong>Análise de Dispersão:</strong>
+      <div class="calc-box">
+        CV = (s / x̄) · 100% = (19,74 / 37,25) · 100% ≈ <strong>52,99%</strong> (dados brutos: <strong>54,86%</strong>).<br>
+        <span class="answer-highlight">Conclusão: Sim, apresentam grande dispersão</span> (CV > 30%, distribuição heterogênea).
+      </div>
+    </div>
+  </div>
+
+  <!-- EXERCÍCIO 7 -->
+  <div class="exercise-card">
+    <div class="exercise-title">Exercício 7 — Peças Defeituosas Diárias (n = 25)</div>
+    <div class="item"><span class="item-label">(a)</span> Classificação da variável: <span class="answer-highlight">Quantitativa discreta</span>.</div>
+
+    <div class="item"><span class="item-label">(b)</span> <strong>Distribuição de Frequências:</strong></div>
+    <table>
+      <thead>
+        <tr><th>Peças (x<sub>i</sub>)</th><th>f<sub>i</sub></th><th>f<sub>r</sub> (%)</th><th>F<sub>i</sub></th><th>f<sub>i</sub> · x<sub>i</sub></th><th>f<sub>i</sub> · (x<sub>i</sub> - x̄)²</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>0</td><td>4</td><td>16%</td><td>4</td><td>0</td><td>14,1376</td></tr>
+        <tr><td>1</td><td>6</td><td>24%</td><td>10</td><td>6</td><td>4,6464</td></tr>
+        <tr><td>2</td><td>8</td><td>32%</td><td>18</td><td>16</td><td>0,1152</td></tr>
+        <tr><td>3</td><td>4</td><td>16%</td><td>22</td><td>12</td><td>5,0176</td></tr>
+        <tr><td>4</td><td>2</td><td>8%</td><td>24</td><td>8</td><td>8,9888</td></tr>
+        <tr><td>5</td><td>1</td><td>4%</td><td>25</td><td>5</td><td>9,7344</td></tr>
+        <tr><td><strong>Total</strong></td><td><strong>25</strong></td><td><strong>100%</strong></td><td>—</td><td><strong>47</strong></td><td><strong>42,64</strong></td></tr>
+      </tbody>
+    </table>
+
+    <div class="item"><span class="item-label">(c)</span> <strong>Gráfico de Barras:</strong></div>
+    <div class="chart-container">
+      
+    <svg width="100%" height="auto" viewBox="0 0 560 280" xmlns="http://www.w3.org/2000/svg" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; margin: 14px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+      <text x="280" y="22" font-size="13.5" font-weight="bold" text-anchor="middle" fill="#0f172a" font-family="sans-serif">Exercício 7: Gráfico de Barras — Peças Defeituosas por Dia</text>
+      <line x1="50" y1="232" x2="530" y2="232" stroke="#e2e8f0" stroke-width="1"/><text x="40" y="236" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">0</text><line x1="50" y1="193.2" x2="530" y2="193.2" stroke="#e2e8f0" stroke-width="1"/><text x="40" y="197.2" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">2</text><line x1="50" y1="154.39999999999998" x2="530" y2="154.39999999999998" stroke="#e2e8f0" stroke-width="1"/><text x="40" y="158.39999999999998" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">4</text><line x1="50" y1="115.60000000000001" x2="530" y2="115.60000000000001" stroke="#e2e8f0" stroke-width="1"/><text x="40" y="119.60000000000001" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">6</text><line x1="50" y1="76.79999999999998" x2="530" y2="76.79999999999998" stroke="#e2e8f0" stroke-width="1"/><text x="40" y="80.79999999999998" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">8</text><line x1="50" y1="38" x2="530" y2="38" stroke="#e2e8f0" stroke-width="1"/><text x="40" y="42" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">10</text>
+      <line x1="50" y1="232" x2="530" y2="232" stroke="#334155" stroke-width="1.5"/>
+      <line x1="50" y1="38" x2="50" y2="232" stroke="#334155" stroke-width="1.5"/>
+      
+      <rect x="68" y="154.39999999999998" width="44" height="77.60000000000001" fill="#10b981" rx="3" stroke="#1d4ed8" stroke-width="1.2"/>
+      <text x="90" y="148.39999999999998" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">4</text>
+      <text x="90" y="250" font-size="11" font-weight="500" text-anchor="middle" fill="#1e293b" font-family="sans-serif">0 peças</text>
+    
+      <rect x="148" y="115.60000000000001" width="44" height="116.39999999999999" fill="#10b981" rx="3" stroke="#1d4ed8" stroke-width="1.2"/>
+      <text x="170" y="109.60000000000001" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">6</text>
+      <text x="170" y="250" font-size="11" font-weight="500" text-anchor="middle" fill="#1e293b" font-family="sans-serif">1 peça</text>
+    
+      <rect x="228" y="76.79999999999998" width="44" height="155.20000000000002" fill="#10b981" rx="3" stroke="#1d4ed8" stroke-width="1.2"/>
+      <text x="250" y="70.79999999999998" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">8</text>
+      <text x="250" y="250" font-size="11" font-weight="500" text-anchor="middle" fill="#1e293b" font-family="sans-serif">2 peças</text>
+    
+      <rect x="308" y="154.39999999999998" width="44" height="77.60000000000001" fill="#10b981" rx="3" stroke="#1d4ed8" stroke-width="1.2"/>
+      <text x="330" y="148.39999999999998" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">4</text>
+      <text x="330" y="250" font-size="11" font-weight="500" text-anchor="middle" fill="#1e293b" font-family="sans-serif">3 peças</text>
+    
+      <rect x="388" y="193.2" width="44" height="38.800000000000004" fill="#10b981" rx="3" stroke="#1d4ed8" stroke-width="1.2"/>
+      <text x="410" y="187.2" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">2</text>
+      <text x="410" y="250" font-size="11" font-weight="500" text-anchor="middle" fill="#1e293b" font-family="sans-serif">4 peças</text>
+    
+      <rect x="468" y="212.6" width="44" height="19.400000000000002" fill="#10b981" rx="3" stroke="#1d4ed8" stroke-width="1.2"/>
+      <text x="490" y="206.6" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">1</text>
+      <text x="490" y="250" font-size="11" font-weight="500" text-anchor="middle" fill="#1e293b" font-family="sans-serif">5 peças</text>
+    
+      <text x="290" y="268" font-size="11.5" font-weight="600" text-anchor="middle" fill="#334155" font-family="sans-serif">Quantidade de Peças Defeituosas (X)</text>
+      <text transform="rotate(-90)" x="-135" y="16" font-size="11.5" font-weight="600" text-anchor="middle" fill="#334155" font-family="sans-serif">Frequência Absoluta (dias)</text>
+    </svg>
+  
+    </div>
+
+    <div class="item"><span class="item-label">(d)</span> No máximo 2 defeitos (X ≤ 2): (4 + 6 + 8) / 25 = 18 / 25 = <span class="answer-highlight">72%</span></div>
+    <div class="item"><span class="item-label">(e)</span> Mais de 3 defeitos (X > 3): (2 + 1) / 25 = 3 / 25 = <span class="answer-highlight">12%</span></div>
+
+    <div class="item"><span class="item-label">(f)</span> <strong>Somatórios da Média e Variância:</strong>
+      <div class="calc-box">
+        <div class="calc-title">Somatório da Média:</div>
+        <div class="somatorio-exp">
+          Σ<sub>i=1</sub><sup>6</sup> (f<sub>i</sub> · x<sub>i</sub>) = (4 · 0) + (6 · 1) + (8 · 2) + (4 · 3) + (2 · 4) + (1 · 5) = 0 + 6 + 16 + 12 + 8 + 5 = <strong>47</strong>
+        </div>
+        x̄ = 47 / 25 = <span class="answer-highlight">1,88 peças/dia</span> | Mediana = <span class="answer-highlight">2</span> | Moda = <span class="answer-highlight">2</span>
+      </div>
+      <div class="calc-box">
+        <div class="calc-title">Somatório da Variância:</div>
+        <div class="somatorio-exp">
+          Σ<sub>i=1</sub><sup>6</sup> f<sub>i</sub>(x<sub>i</sub> - 1,88)² =<br>
+          4·(0-1,88)² + 6·(1-1,88)² + 8·(2-1,88)² + 4·(3-1,88)² + 2·(4-1,88)² + 1·(5-1,88)²<br>
+          = 14,1376 + 4,6464 + 0,1152 + 5,0176 + 8,9888 + 9,7344 = <strong>42,64</strong>
+        </div>
+        • <strong>Variância Amostral:</strong> s² = 42,64 / 24 ≈ <span class="answer-highlight">1,78</span><br>
+        • <strong>Desvio Padrão Amostral:</strong> s = √1,7767 ≈ <span class="answer-highlight">1,33 peças</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXERCÍCIO 8 -->
+  <div class="exercise-card">
+    <div class="exercise-title">Exercício 8 — Sensores Mecatrônicos (n = 32)</div>
+    <div class="enunciado">Medições em ms (12 a 38 ms). Sturges: k = 6 classes, amplitude conveniente h = 5.</div>
+
+    <div class="item"><span class="item-label">(a), (b) e (c)</span> <strong>Tabela de Frequências:</strong></div>
+    <table>
+      <thead>
+        <tr><th>Classe</th><th>Intervalo (ms)</th><th>Ponto Médio (x<sub>i</sub>)</th><th>f<sub>i</sub></th><th>f<sub>r</sub> (%)</th><th>F<sub>i</sub></th><th>f<sub>i</sub> · x<sub>i</sub></th><th>f<sub>i</sub> · (x<sub>i</sub> - x̄)²</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>[10 ⊢ 15)</td><td>12,5</td><td>3</td><td>9,38%</td><td>3</td><td>37,5</td><td>445,61</td></tr>
+        <tr><td>2</td><td>[15 ⊢ 20)</td><td>17,5</td><td>7</td><td>21,88%</td><td>10</td><td>122,5</td><td>361,62</td></tr>
+        <tr><td>3</td><td>[20 ⊢ 25)</td><td>22,5</td><td>7</td><td>21,88%</td><td>17</td><td>157,5</td><td>33,50</td></tr>
+        <tr><td>4</td><td>[25 ⊢ 30)</td><td>27,5</td><td>6</td><td>18,75%</td><td>23</td><td>165,0</td><td>47,46</td></tr>
+        <tr><td>5</td><td>[30 ⊢ 35)</td><td>32,5</td><td>6</td><td>18,75%</td><td>29</td><td>195,0</td><td>366,21</td></tr>
+        <tr><td>6</td><td>[35 ⊢ 40)</td><td>37,5</td><td>3</td><td>9,38%</td><td>32</td><td>112,5</td><td>492,48</td></tr>
+        <tr><td><strong>Total</strong></td><td>—</td><td>—</td><td><strong>32</strong></td><td><strong>100%</strong></td><td>—</td><td><strong>790,0</strong></td><td><strong>1746,88</strong></td></tr>
+      </tbody>
+    </table>
+
+    <div class="item"><span class="item-label">(d) e (e)</span> <strong>Histograma e Polígono de Frequências:</strong></div>
+    <div class="chart-container">
+      
+    <svg width="100%" height="auto" viewBox="0 0 580 300" xmlns="http://www.w3.org/2000/svg" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; margin: 14px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+      <text x="302.5" y="24" font-size="13.5" font-weight="bold" text-anchor="middle" fill="#0f172a" font-family="sans-serif">Exercício 8: Histograma e Polígono de Frequências — Sensores Mecatrônicos</text>
+      
+      <g transform="translate(340, 16)">
+        <rect x="0" y="0" width="12" height="12" fill="#93c5fd" stroke="#2563eb" stroke-width="1"/>
+        <text x="18" y="10" font-size="10.5" fill="#334155" font-family="sans-serif">Histograma</text>
+        <line x1="95" y1="6" x2="115" y2="6" stroke="#7c3aed" stroke-width="2.5"/>
+        <circle cx="105" cy="6" r="3" fill="#7c3aed"/>
+        <text x="122" y="10" font-size="10.5" fill="#334155" font-family="sans-serif">Polígono</text>
+      </g>
+    
+      <line x1="55" y1="250" x2="550" y2="250" stroke="#e2e8f0" stroke-width="1"/><text x="45" y="254" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">0</text><line x1="55" y1="208" x2="550" y2="208" stroke="#e2e8f0" stroke-width="1"/><text x="45" y="212" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">2</text><line x1="55" y1="166" x2="550" y2="166" stroke="#e2e8f0" stroke-width="1"/><text x="45" y="170" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">4</text><line x1="55" y1="124" x2="550" y2="124" stroke="#e2e8f0" stroke-width="1"/><text x="45" y="128" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">6</text><line x1="55" y1="82" x2="550" y2="82" stroke="#e2e8f0" stroke-width="1"/><text x="45" y="86" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">8</text><line x1="55" y1="40" x2="550" y2="40" stroke="#e2e8f0" stroke-width="1"/><text x="45" y="44" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">10</text>
+      <line x1="55" y1="250" x2="550" y2="250" stroke="#334155" stroke-width="1.5"/>
+      <line x1="55" y1="40" x2="55" y2="250" stroke="#334155" stroke-width="1.5"/>
+      
+      <rect x="116.875" y="187" width="61.875" height="63" fill="#93c5fd" opacity="0.85" stroke="#2563eb" stroke-width="1.2"/>
+      <text x="147.8125" y="181" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">3</text>
+    
+      <rect x="178.75" y="103" width="61.875" height="147" fill="#93c5fd" opacity="0.85" stroke="#2563eb" stroke-width="1.2"/>
+      <text x="209.6875" y="97" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">7</text>
+    
+      <rect x="240.625" y="103" width="61.875" height="147" fill="#93c5fd" opacity="0.85" stroke="#2563eb" stroke-width="1.2"/>
+      <text x="271.5625" y="97" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">7</text>
+    
+      <rect x="302.5" y="124" width="61.875" height="126" fill="#93c5fd" opacity="0.85" stroke="#2563eb" stroke-width="1.2"/>
+      <text x="333.4375" y="118" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">6</text>
+    
+      <rect x="364.375" y="124" width="61.875" height="126" fill="#93c5fd" opacity="0.85" stroke="#2563eb" stroke-width="1.2"/>
+      <text x="395.3125" y="118" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">6</text>
+    
+      <rect x="426.25" y="187" width="61.875" height="63" fill="#93c5fd" opacity="0.85" stroke="#2563eb" stroke-width="1.2"/>
+      <text x="457.1875" y="181" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">3</text>
+    
+      
+      <polyline points="85.9,250.0 147.8,187.0 209.7,103.0 271.6,103.0 333.4,124.0 395.3,124.0 457.2,187.0 519.1,250.0" fill="none" stroke="#7c3aed" stroke-width="2.5" stroke-linejoin="round"/>
+    <circle cx="85.9" cy="250.0" r="3.5" fill="#7c3aed" stroke="#ffffff" stroke-width="1.5"/><circle cx="147.8" cy="187.0" r="3.5" fill="#7c3aed" stroke="#ffffff" stroke-width="1.5"/><circle cx="209.7" cy="103.0" r="3.5" fill="#7c3aed" stroke="#ffffff" stroke-width="1.5"/><circle cx="271.6" cy="103.0" r="3.5" fill="#7c3aed" stroke="#ffffff" stroke-width="1.5"/><circle cx="333.4" cy="124.0" r="3.5" fill="#7c3aed" stroke="#ffffff" stroke-width="1.5"/><circle cx="395.3" cy="124.0" r="3.5" fill="#7c3aed" stroke="#ffffff" stroke-width="1.5"/><circle cx="457.2" cy="187.0" r="3.5" fill="#7c3aed" stroke="#ffffff" stroke-width="1.5"/><circle cx="519.1" cy="250.0" r="3.5" fill="#7c3aed" stroke="#ffffff" stroke-width="1.5"/>
+      
+      <line x1="116.875" y1="250" x2="116.875" y2="255" stroke="#334155" stroke-width="1"/>
+      <text x="116.875" y="268" font-size="10.5" text-anchor="middle" fill="#334155" font-family="sans-serif">10</text>
+    
+      <line x1="178.75" y1="250" x2="178.75" y2="255" stroke="#334155" stroke-width="1"/>
+      <text x="178.75" y="268" font-size="10.5" text-anchor="middle" fill="#334155" font-family="sans-serif">15</text>
+    
+      <line x1="240.625" y1="250" x2="240.625" y2="255" stroke="#334155" stroke-width="1"/>
+      <text x="240.625" y="268" font-size="10.5" text-anchor="middle" fill="#334155" font-family="sans-serif">20</text>
+    
+      <line x1="302.5" y1="250" x2="302.5" y2="255" stroke="#334155" stroke-width="1"/>
+      <text x="302.5" y="268" font-size="10.5" text-anchor="middle" fill="#334155" font-family="sans-serif">25</text>
+    
+      <line x1="364.375" y1="250" x2="364.375" y2="255" stroke="#334155" stroke-width="1"/>
+      <text x="364.375" y="268" font-size="10.5" text-anchor="middle" fill="#334155" font-family="sans-serif">30</text>
+    
+      <line x1="426.25" y1="250" x2="426.25" y2="255" stroke="#334155" stroke-width="1"/>
+      <text x="426.25" y="268" font-size="10.5" text-anchor="middle" fill="#334155" font-family="sans-serif">35</text>
+    
+    <line x1="488.125" y1="250" x2="488.125" y2="255" stroke="#334155" stroke-width="1"/>
+    <text x="488.125" y="268" font-size="10.5" text-anchor="middle" fill="#334155" font-family="sans-serif">40</text>
+  
+      <text x="302.5" y="288" font-size="11.5" font-weight="600" text-anchor="middle" fill="#334155" font-family="sans-serif">Tempo de Resposta (milissegundos - ms)</text>
+      <text transform="rotate(-90)" x="-145" y="18" font-size="11.5" font-weight="600" text-anchor="middle" fill="#334155" font-family="sans-serif">Frequência Absoluta (sensores)</text>
+    </svg>
+  
+    </div>
+
+    <div class="item"><span class="item-label">(f)</span> <strong>Somatórios da Média e Variância:</strong>
+      <div class="calc-box">
+        <div class="calc-title">Somatório da Média:</div>
+        <div class="somatorio-exp">
+          Σ<sub>i=1</sub><sup>6</sup> (f<sub>i</sub> · x<sub>i</sub>) = (3 · 12,5) + (7 · 17,5) + (7 · 22,5) + (6 · 27,5) + (6 · 32,5) + (3 · 37,5)<br>
+          = 37,5 + 122,5 + 157,5 + 165,0 + 195,0 + 112,5 = <strong>790,0</strong>
+        </div>
+        x̄ = 790,0 / 32 = <span class="answer-highlight">24,69 ms</span> | Mediana = <span class="answer-highlight">24,29 ms</span> | Moda = <span class="answer-highlight">20,00 ms</span>
+      </div>
+      <div class="calc-box">
+        <div class="calc-title">Somatório da Variância:</div>
+        <div class="somatorio-exp">
+          Σ<sub>i=1</sub><sup>6</sup> f<sub>i</sub>(x<sub>i</sub> - 24,69)² =<br>
+          3·(12,5-24,69)² + 7·(17,5-24,69)² + 7·(22,5-24,69)² + 6·(27,5-24,69)² + 6·(32,5-24,69)² + 3·(37,5-24,69)²<br>
+          = 445,61 + 361,62 + 33,50 + 47,46 + 366,21 + 492,48 = <strong>1746,88</strong>
+        </div>
+        • <strong>Variância Amostral:</strong> s² = 1746,88 / 31 ≈ <span class="answer-highlight">56,35 ms²</span><br>
+        • <strong>Desvio Padrão Amostral:</strong> s = √56,35 ≈ <span class="answer-highlight">7,51 ms</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXERCÍCIO 13 -->
+  <div class="exercise-card">
+    <div class="exercise-title">Exercício 13 — Diâmetros de 40 Eixos Produzidos (n = 40)</div>
+    <table>
+      <thead>
+        <tr><th>Classe</th><th>Diâmetro (mm)</th><th>Ponto Médio (x<sub>i</sub>)</th><th>f<sub>i</sub></th><th>F<sub>i</sub></th><th>f<sub>i</sub> · x<sub>i</sub></th><th>f<sub>i</sub> · (x<sub>i</sub> - x̄)²</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>[19,80 ⊢ 19,90)</td><td>19,85</td><td>3</td><td>3</td><td>59,55</td><td>0,1230</td></tr>
+        <tr><td>2</td><td>[19,90 ⊢ 20,00)</td><td>19,95</td><td>8</td><td>11</td><td>159,60</td><td>0,0841</td></tr>
+        <tr><td>3</td><td>[20,00 ⊢ 20,10)</td><td>20,05</td><td>17</td><td>28</td><td>340,85</td><td>0,0001</td></tr>
+        <tr><td>4</td><td>[20,10 ⊢ 20,20)</td><td>20,15</td><td>9</td><td>37</td><td>181,35</td><td>0,0856</td></tr>
+        <tr><td>5</td><td>[20,20 ⊢ 20,30)</td><td>20,25</td><td>3</td><td>40</td><td>60,75</td><td>0,1170</td></tr>
+        <tr><td><strong>Total</strong></td><td>—</td><td>—</td><td><strong>40</strong></td><td>—</td><td><strong>802,10</strong></td><td><strong>0,4098</strong></td></tr>
+      </tbody>
+    </table>
+
+    <div class="item"><span class="item-label">(a)</span> <strong>Somatório da Média:</strong>
+      <div class="somatorio-exp">
+        Σ<sub>i=1</sub><sup>5</sup> (f<sub>i</sub> · x<sub>i</sub>) = (3 · 19,85) + (8 · 19,95) + (17 · 20,05) + (9 · 20,15) + (3 · 20,25)<br>
+        = 59,55 + 159,60 + 340,85 + 181,35 + 60,75 = <strong>802,10</strong>
+      </div>
+      x̄ = 802,10 / 40 = <span class="answer-highlight">20,0525 mm</span>
+    </div>
+
+    <div class="item"><span class="item-label">(b)</span> Mediana aproximada: Md = 20,00 + [(20-11)/17]·0,10 ≈ <span class="answer-highlight">20,0529 mm</span></div>
+    <div class="item"><span class="item-label">(c)</span> Classe modal: <span class="answer-highlight">[20,00 ⊢ 20,10) mm</span> (f = 17)</div>
+
+    <div class="item"><span class="item-label">(d)</span> <strong>Histograma:</strong></div>
+    <div class="chart-container">
+      
+    <svg width="100%" height="auto" viewBox="0 0 580 300" xmlns="http://www.w3.org/2000/svg" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; margin: 14px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+      <text x="302.5" y="24" font-size="13.5" font-weight="bold" text-anchor="middle" fill="#0f172a" font-family="sans-serif">Exercício 13: Histograma — Diâmetro dos Eixos Produzidos</text>
+      
+      <line x1="55" y1="250" x2="550" y2="250" stroke="#e2e8f0" stroke-width="1"/><text x="45" y="254" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">0</text><line x1="55" y1="215" x2="550" y2="215" stroke="#e2e8f0" stroke-width="1"/><text x="45" y="219" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">3</text><line x1="55" y1="180" x2="550" y2="180" stroke="#e2e8f0" stroke-width="1"/><text x="45" y="184" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">6</text><line x1="55" y1="145" x2="550" y2="145" stroke="#e2e8f0" stroke-width="1"/><text x="45" y="149" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">9</text><line x1="55" y1="110" x2="550" y2="110" stroke="#e2e8f0" stroke-width="1"/><text x="45" y="114" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">12</text><line x1="55" y1="75" x2="550" y2="75" stroke="#e2e8f0" stroke-width="1"/><text x="45" y="79" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">15</text><line x1="55" y1="40" x2="550" y2="40" stroke="#e2e8f0" stroke-width="1"/><text x="45" y="44" font-size="11" text-anchor="end" fill="#64748b" font-family="sans-serif">18</text>
+      <line x1="55" y1="250" x2="550" y2="250" stroke="#334155" stroke-width="1.5"/>
+      <line x1="55" y1="40" x2="55" y2="250" stroke="#334155" stroke-width="1.5"/>
+      
+      <rect x="55" y="215" width="98.9999999999979" height="35" fill="#93c5fd" opacity="0.85" stroke="#2563eb" stroke-width="1.2"/>
+      <text x="104.49999999999895" y="209" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">3</text>
+    
+      <rect x="153.9999999999979" y="156.66666666666669" width="99.00000000000139" height="93.33333333333333" fill="#93c5fd" opacity="0.85" stroke="#2563eb" stroke-width="1.2"/>
+      <text x="203.49999999999858" y="150.66666666666669" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">8</text>
+    
+      <rect x="252.9999999999993" y="51.666666666666686" width="99.00000000000139" height="198.33333333333331" fill="#93c5fd" opacity="0.85" stroke="#2563eb" stroke-width="1.2"/>
+      <text x="302.5" y="45.666666666666686" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">17</text>
+    
+      <rect x="352.0000000000007" y="145" width="98.9999999999979" height="105" fill="#93c5fd" opacity="0.85" stroke="#2563eb" stroke-width="1.2"/>
+      <text x="401.49999999999966" y="139" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">9</text>
+    
+      <rect x="450.9999999999986" y="215" width="99.00000000000142" height="35" fill="#93c5fd" opacity="0.85" stroke="#2563eb" stroke-width="1.2"/>
+      <text x="500.4999999999993" y="209" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif">3</text>
+    
+      
+      
+      <line x1="55" y1="250" x2="55" y2="255" stroke="#334155" stroke-width="1"/>
+      <text x="55" y="268" font-size="10.5" text-anchor="middle" fill="#334155" font-family="sans-serif">19.8</text>
+    
+      <line x1="153.9999999999979" y1="250" x2="153.9999999999979" y2="255" stroke="#334155" stroke-width="1"/>
+      <text x="153.9999999999979" y="268" font-size="10.5" text-anchor="middle" fill="#334155" font-family="sans-serif">19.9</text>
+    
+      <line x1="252.9999999999993" y1="250" x2="252.9999999999993" y2="255" stroke="#334155" stroke-width="1"/>
+      <text x="252.9999999999993" y="268" font-size="10.5" text-anchor="middle" fill="#334155" font-family="sans-serif">20</text>
+    
+      <line x1="352.0000000000007" y1="250" x2="352.0000000000007" y2="255" stroke="#334155" stroke-width="1"/>
+      <text x="352.0000000000007" y="268" font-size="10.5" text-anchor="middle" fill="#334155" font-family="sans-serif">20.1</text>
+    
+      <line x1="450.9999999999986" y1="250" x2="450.9999999999986" y2="255" stroke="#334155" stroke-width="1"/>
+      <text x="450.9999999999986" y="268" font-size="10.5" text-anchor="middle" fill="#334155" font-family="sans-serif">20.2</text>
+    
+    <line x1="550" y1="250" x2="550" y2="255" stroke="#334155" stroke-width="1"/>
+    <text x="550" y="268" font-size="10.5" text-anchor="middle" fill="#334155" font-family="sans-serif">20.3</text>
+  
+      <text x="302.5" y="288" font-size="11.5" font-weight="600" text-anchor="middle" fill="#334155" font-family="sans-serif">Diâmetro do Eixo (mm)</text>
+      <text transform="rotate(-90)" x="-145" y="18" font-size="11.5" font-weight="600" text-anchor="middle" fill="#334155" font-family="sans-serif">Frequência Absoluta (eixos)</text>
+    </svg>
+  
+    </div>
+
+    <div class="item"><span class="item-label">(e)</span> <strong>Análise em Relação ao Valor Nominal de 20,05 mm:</strong>
+      <div class="calc-box">
+        O somatório dos desvios quadráticos resulta em Σ f<sub>i</sub>(x<sub>i</sub> - x̄)² = 0,1230 + 0,0841 + 0,0001 + 0,0856 + 0,1170 = <strong>0,4098</strong>.<br>
+        Variância s² = 0,4098 / 39 ≈ 0,0105 ⇒ Desvio padrão <strong>s ≈ 0,102 mm</strong>.<br>
+        <span class="answer-highlight">Conclusão: Altíssima precisão e excelente conformidade</span>. O processo é perfeitamente centrado no valor nominal (20,05 mm), unimodal e simétrico.
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-title">Parte II — Probabilidade</h2>
+
+  <!-- EXERCÍCIO 14 -->
+  <div class="exercise-card">
+    <div class="exercise-title">Exercício 14 — Lançamento de Dois Dados (|Ω| = 36)</div>
+    <div class="item"><span class="item-label">(a)</span> P(A) [soma > 8]: 10 pares / 36 = <span class="answer-highlight">5/18 (≈ 0,2778)</span></div>
+    <div class="item"><span class="item-label">(b)</span> P(B) [pelo menos um 6]: 11 pares / 36 = <span class="answer-highlight">11/36 (≈ 0,3056)</span></div>
+    <div class="item"><span class="item-label">(c)</span> P(A ∩ B): 7 pares / 36 = <span class="answer-highlight">7/36 (≈ 0,1944)</span></div>
+    <div class="item"><span class="item-label">(d)</span> P(A ∪ B) = 10/36 + 11/36 - 7/36 = 14/36 = <span class="answer-highlight">7/18 (≈ 0,3889)</span></div>
+    <div class="item"><span class="item-label">(e)</span> P(A<sup>c</sup>) = 1 - 10/36 = <span class="answer-highlight">13/18 (≈ 0,7222)</span></div>
+  </div>
+
+  <!-- EXERCÍCIO 15 -->
+  <div class="exercise-card">
+    <div class="exercise-title">Exercício 15 — Defeitos em Peças Industriais</div>
+    <div class="item"><span class="item-label">(a)</span> Pelo menos um defeito: P(D ∪ S) = 0,08 + 0,12 - 0,03 = <span class="answer-highlight">0,17</span></div>
+    <div class="item"><span class="item-label">(b)</span> Nenhum defeito: 1 - 0,17 = <span class="answer-highlight">0,83</span></div>
+    <div class="item"><span class="item-label">(c)</span> Apenas dimensional: 0,08 - 0,03 = <span class="answer-highlight">0,05</span></div>
+    <div class="item"><span class="item-label">(d)</span> Exatamente um defeito: 0,05 + (0,12 - 0,03) = 0,05 + 0,09 = <span class="answer-highlight">0,14</span></div>
+  </div>
+
+  <!-- EXERCÍCIO 17 -->
+  <div class="exercise-card">
+    <div class="exercise-title">Exercício 17 — Instalação Sequencial de 7 Componentes</div>
+    <div class="item"><span class="item-label">(a)</span> Total de ordens: 7! = 7 · 6 · 5 · 4 · 3 · 2 · 1 = <span class="answer-highlight">5040</span></div>
+    <div class="item"><span class="item-label">(b)</span> A e B lado a lado: (2! · 6!) / 7! = <span class="answer-highlight">2/7</span></div>
+    <div class="item"><span class="item-label">(c)</span> A na 1ª posição: 6! / 7! = <span class="answer-highlight">1/7</span></div>
+    <div class="item"><span class="item-label">(d)</span> A antes de B: por simetria = <span class="answer-highlight">1/2</span></div>
+  </div>
+
+  <!-- EXERCÍCIO 18 -->
+  <div class="exercise-card">
+    <div class="exercise-title">Exercício 18 — Escolha de Equipe (4 Engenheiros de 10)</div>
+    <div class="item"><span class="item-label">(a)</span> Total de equipes: C(10, 4) = (10·9·8·7)/(4·3·2·1) = <span class="answer-highlight">210</span></div>
+    <div class="item"><span class="item-label">(b)</span> Engenheiro específico escolhido: C(9, 3) / 210 = 84 / 210 = <span class="answer-highlight">2/5 = 0,40</span></div>
+    <div class="item"><span class="item-label">(c)</span> Dois específicos juntos: C(8, 2) / 210 = 28 / 210 = <span class="answer-highlight">2/15 ≈ 0,1333</span></div>
+    <div class="item"><span class="item-label">(d)</span> Nenhum dos dois escolhido: C(8, 4) / 210 = 70 / 210 = <span class="answer-highlight">1/3 ≈ 0,3333</span></div>
+  </div>
+
+  <!-- EXERCÍCIO 19 -->
+  <div class="exercise-card">
+    <div class="exercise-title">Exercício 19 — Códigos Aeronáuticos (3 Letras e 3 Dígitos)</div>
+    <div class="item"><span class="item-label">(a)</span> Total de códigos: (26·25·24) · (10·9·8) = 15.600 · 720 = <span class="answer-highlight">11.232.000</span></div>
+    <div class="item"><span class="item-label">(b)</span> Começar com letra A: 1 / 26 = <span class="answer-highlight">1/26</span></div>
+    <div class="item"><span class="item-label">(c)</span> Terminar com algarismo par: 5 / 10 = <span class="answer-highlight">1/2</span></div>
+    <div class="item"><span class="item-label">(d)</span> Começar com vogal e terminar com ímpar: (5/26) · (5/10) = <span class="answer-highlight">5/52</span></div>
+  </div>
+
+  <!-- EXERCÍCIO 23 -->
+  <div class="exercise-card">
+    <div class="exercise-title">Exercício 23 — Inspeção e Fornecedores Mecânicos</div>
+    <div class="item"><span class="item-label">(a)</span> P(Reprovado) = 26 / 200 = <span class="answer-highlight">0,13 (13%)</span></div>
+    <div class="item"><span class="item-label">(b)</span> P(Fornecedor C) = 60 / 200 = <span class="answer-highlight">0,30 (30%)</span></div>
+    <div class="item"><span class="item-label">(c)</span> P(Reprovado | C) = 12 / 60 = <span class="answer-highlight">0,20 (20%)</span></div>
+    <div class="item"><span class="item-label">(d)</span> P(C | Reprovado) = 12 / 26 = <span class="answer-highlight">6/13 ≈ 0,4615 (46,15%)</span></div>
+    <div class="item"><span class="item-label">(e)</span> Independência entre Fornecedor A e Aprovado:
+      <div class="formula">P(A ∩ Ap) = 72/200 = 0,36 ≠ P(A)·P(Ap) = 0,40 · 0,87 = 0,348 ⇒ <span class="answer-highlight">Não são independentes</span></div>
+    </div>
+  </div>
+
+  <!-- EXERCÍCIO 24 -->
+  <div class="exercise-card">
+    <div class="exercise-title">Exercício 24 — Urna com Bolas (7 V, 5 A, 4 Ve; Total 16)</div>
+    <div class="item"><span class="item-label">(a)</span> Segunda ser azul sabendo que a primeira foi vermelha: 5 / 15 = <span class="answer-highlight">1/3</span></div>
+    <div class="item"><span class="item-label">(b)</span> Ambas vermelhas: (7/16) · (6/15) = 42/240 = <span class="answer-highlight">7/40 = 0,175</span></div>
+    <div class="item"><span class="item-label">(c)</span> Cores diferentes: 1 - [(21 + 10 + 6) / 120] = 1 - 37/120 = <span class="answer-highlight">83/120 ≈ 0,6917</span></div>
+    <div class="item"><span class="item-label">(d)</span> Pelo menos uma ser verde: 1 - [C(12,2) / C(16,2)] = 1 - 66/120 = <span class="answer-highlight">9/20 = 0,45</span></div>
+  </div>
+
+  <!-- EXERCÍCIO 27 -->
+  <div class="exercise-card">
+    <div class="exercise-title">Exercício 27 — Atraso de Aeronaves (Teorema da Probabilidade Total)</div>
+    <div class="item"><span class="item-label">(a)</span> Somatório da probabilidade total de atraso:
+      <div class="somatorio-exp">
+        P(A) = Σ<sub>i=1</sub><sup>3</sup> P(C<sub>i</sub>) · P(A | C<sub>i</sub>) = (0,50 · 0,10) + (0,30 · 0,20) + (0,20 · 0,35) = 0,05 + 0,06 + 0,07 = <strong>0,18</strong>
+      </div>
+      <span class="answer-highlight">P(A) = 0,18 (18%)</span>
+    </div>
+    <div class="item"><span class="item-label">(b)</span> Probabilidade de não sofrer atraso: 1 - 0,18 = <span class="answer-highlight">0,82 (82%)</span></div>
+  </div>
+
+  <!-- EXERCÍCIO 28 -->
+  <div class="exercise-card">
+    <div class="exercise-title">Exercício 28 — Teorema de Bayes (Máquinas e Defeitos)</div>
+    <div class="calc-box">
+      <strong>Somatório da Probabilidade Total de Defeito:</strong><br>
+      <div class="somatorio-exp">
+        P(D) = Σ<sub>i=1</sub><sup>3</sup> P(M<sub>i</sub>) · P(D | M<sub>i</sub>) = (0,40 · 0,02) + (0,35 · 0,03) + (0,25 · 0,05) = 0,008 + 0,0105 + 0,0125 = <strong>0,031</strong>
+      </div>
+    </div>
+    <div class="item"><span class="item-label">(a)</span> Produzida por M<sub>1</sub>: 0,008 / 0,031 = <span class="answer-highlight">8/31 ≈ 0,2581 (25,81%)</span></div>
+    <div class="item"><span class="item-label">(b)</span> Produzida por M<sub>2</sub>: 0,0105 / 0,031 = <span class="answer-highlight">21/62 ≈ 0,3387 (33,87%)</span></div>
+    <div class="item"><span class="item-label">(c)</span> Produzida por M<sub>3</sub>: 0,0125 / 0,031 = <span class="answer-highlight">25/62 ≈ 0,4032 (40,32%)</span></div>
+  </div>
+
+  <!-- EXERCÍCIO 30 -->
+  <div class="exercise-card">
+    <div class="exercise-title">Exercício 30 — Teste Diagnóstico e Teorema de Bayes</div>
+    <div class="item"><span class="item-label">(a)</span> Somatório de teste positivo:
+      <div class="somatorio-exp">
+        P(+) = P(D)·P(+|D) + P(D<sup>c</sup>)·P(+|D<sup>c</sup>) = (0,02 · 0,95) + (0,98 · 0,10) = 0,019 + 0,098 = <strong>0,117</strong>
+      </div>
+      <span class="answer-highlight">P(+) = 0,117 (11,7%)</span>
+    </div>
+    <div class="item"><span class="item-label">(b)</span> Doente dado teste positivo (VPP): 0,019 / 0,117 = <span class="answer-highlight">19/117 ≈ 0,1624 (16,24%)</span></div>
+    <div class="item"><span class="item-label">(c)</span> Sadio dado teste negativo (VPN): (0,98 · 0,90) / 0,883 = 0,882 / 0,883 = <span class="answer-highlight">0,9989 (99,89%)</span></div>
+    <div class="item"><span class="item-label">(d)</span> Sensibilidade (95%) avalia laboratorialmente os doentes, enquanto VPP (16,24%) é a probabilidade clínica real dada a baixa prevalência (2%) na população geral.</div>
+  </div>
+
+  <!-- EXERCÍCIO 31 -->
+  <div class="exercise-card">
+    <div class="exercise-title">Exercício 31 — Fornecedores de Rolamentos e Falhas</div>
+    <div class="item"><span class="item-label">(a)</span> Somatório da probabilidade total de falha:
+      <div class="somatorio-exp">
+        P(F) = (0,50 · 0,01) + (0,30 · 0,03) + (0,20 · 0,06) = 0,005 + 0,009 + 0,012 = <strong>0,026</strong>
+      </div>
+      <span class="answer-highlight">P(F) = 0,026 (2,6%)</span>
+    </div>
+    <div class="item"><span class="item-label">(b)</span> Fornecido por A: 0,005 / 0,026 = <span class="answer-highlight">5/26 ≈ 0,1923 (19,23%)</span></div>
+    <div class="item"><span class="item-label">(c)</span> Fornecido por B: 0,009 / 0,026 = <span class="answer-highlight">9/26 ≈ 0,3462 (34,62%)</span></div>
+    <div class="item"><span class="item-label">(d)</span> Fornecido por C: 0,012 / 0,026 = <span class="answer-highlight">6/13 ≈ 0,4615 (46,15%)</span></div>
+  </div>
+
+</body>
+</html>
